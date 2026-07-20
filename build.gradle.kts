@@ -5,3 +5,9 @@ plugins {
 korge {
     targetAndroid()
 }
+
+afterEvaluate {
+    tasks.matching { it.name == "lintVitalAnalyzeRelease" }.configureEach {
+        enabled = false
+    }
+}

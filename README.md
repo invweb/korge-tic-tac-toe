@@ -7,10 +7,19 @@ Runs on **Desktop (JVM)** and **Android**.
 ## Screenshots
 
 ### Splash Screen
-![Splash](screenshots/screenshot_splash.png)
+![Splash](screenshots/01_splash.png)
 
-### Menu
-![Menu](screenshots/screenshot_menu.png)
+### Main Menu
+![Menu](screenshots/02_menu.png)
+
+### Game Board
+![Game](screenshots/03_game.png)
+
+### Settings
+![Settings](screenshots/04_settings.png)
+
+### Game History
+![History](screenshots/05_history.png)
 
 ## How to Run
 
@@ -85,10 +94,19 @@ To add a new language:
 ## Скриншоты
 
 ### Splash Screen
-![Splash](screenshots/screenshot_splash.png)
+![Splash](screenshots/01_splash.png)
 
-### Меню
-![Menu](screenshots/screenshot_menu.png)
+### Главное меню
+![Menu](screenshots/02_menu.png)
+
+### Игровое поле
+![Game](screenshots/03_game.png)
+
+### Настройки
+![Settings](screenshots/04_settings.png)
+
+### История игр
+![History](screenshots/05_history.png)
 
 ## Запуск
 

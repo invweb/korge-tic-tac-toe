@@ -12,8 +12,6 @@ permissions:
 jobs:
   android:
     runs-on: ubuntu-latest
-    env:
-      ANDROID_HOME: /usr/local/lib/android/sdk
     steps:
       - uses: actions/checkout@v4
 
@@ -32,9 +30,6 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
 
       - name: Build Android APK
         run: ./gradlew assembleDebug --no-daemon

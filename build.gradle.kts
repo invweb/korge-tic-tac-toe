@@ -7,7 +7,10 @@ korge {
 }
 
 afterEvaluate {
-    tasks.matching { it.name.contains("Lint", ignoreCase = true) || it.name.contains("lint", ignoreCase = false) }.configureEach {
-        enabled = false
+    val jvmProcessResources = tasks.findByName("jvmProcessResources")
+    if (jvmProcessResources != null) {
+        tasks.matching { it.name.contains("Lint", ignoreCase = true) }.configureEach {
+            dependsOn(jvmProcessResources)
+        }
     }
 }

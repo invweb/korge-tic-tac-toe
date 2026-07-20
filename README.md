@@ -48,15 +48,30 @@ JAVA_HOME=/path/to/jdk21 ./gradlew runAndroidEmulatorDebug
 - JDK 21
 - Gradle 8.9
 
+## Internationalization (i18n)
+
+Translations live in Kotlin source code under `src/commonMain/kotlin/i18n/` — **not** in Android `strings.xml` resources.
+
+This is because KorGE renders all text through its own `korlibs.korge.view.Text` view, not through native Android `TextView` or `strings.xml`. The same Kotlin code runs on all platforms (Desktop, Android, Web), so translations must be in shared `commonMain`.
+
+To add a new language:
+1. Create `StringsXx.kt` with a new `val stringsXx = Strings(...)` instance
+2. Add it to `allStrings` and `allThemeNames` in `Main.kt`
+
 ## Project Structure
 
 ```
-├── build.gradle.kts          # KorGE plugin + Android target
-├── settings.gradle.kts       # Repositories
-├── local.properties          # Android SDK path
+├── build.gradle.kts              # KorGE plugin + Android target
+├── settings.gradle.kts           # Repositories
+├── local.properties              # Android SDK path
 ├── src/commonMain/kotlin/
-│   └── Main.kt               # Entire application code
-└── screenshots/              # Screenshots
+│   ├── Main.kt                   # Application entry point & UI
+│   └── i18n/
+│       ├── Strings.kt            # Strings data class
+│       ├── StringsRu.kt          # Russian translations
+│       ├── StringsEn.kt          # English translations
+│       └── StringsDe.kt          # German translations
+└── screenshots/                  # Screenshots
 ```
 
 ---
@@ -111,13 +126,28 @@ JAVA_HOME=/path/to/jdk21 ./gradlew runAndroidEmulatorDebug
 - JDK 21
 - Gradle 8.9
 
+## Интернационализация (i18n)
+
+Переводы хранятся в Kotlin-коде в `src/commonMain/kotlin/i18n/` — **не** в Android-ресурсах `strings.xml`.
+
+Это связано с тем, что KorGE рисует весь текст через свой view `korlibs.korge.view.Text`, а не через нативный Android `TextView` или `strings.xml`. Один и тот же Kotlin-код работает на всех платформах (Desktop, Android, Web), поэтому переводы должны быть в общем `commonMain`.
+
+Чтобы добавить новый язык:
+1. Создать `StringsXx.kt` с новым экземпляром `val stringsXx = Strings(...)`
+2. Добавить его в `allStrings` и `allThemeNames` в `Main.kt`
+
 ## Структура проекта
 
 ```
-├── build.gradle.kts          # Плагин KorGE + Android target
-├── settings.gradle.kts       # Репозитории
-├── local.properties          # Путь к Android SDK
+├── build.gradle.kts              # Плагин KorGE + Android target
+├── settings.gradle.kts           # Репозитории
+├── local.properties              # Путь к Android SDK
 ├── src/commonMain/kotlin/
-│   └── Main.kt               # Весь код приложения
-└── screenshots/              # Скриншоты
+│   ├── Main.kt                   # Точка входа и UI
+│   └── i18n/
+│       ├── Strings.kt            # Data class со строками
+│       ├── StringsRu.kt          # Русские переводы
+│       ├── StringsEn.kt          # Английские переводы
+│       └── StringsDe.kt          # Немецкие переводы
+└── screenshots/                  # Скриншоты
 ```

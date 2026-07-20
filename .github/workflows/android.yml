@@ -31,6 +31,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: Accept Android SDK licenses
+        run: yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+
+      - name: Create local.properties
+        run: echo "sdk.dir=$ANDROID_HOME" > local.properties
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
+
       - name: Build Android APK
         run: ./gradlew assembleDebug --no-daemon
 

@@ -8,9 +8,9 @@ Runs on **Desktop (JVM)** and **Android**.
 
 ### Desktop
 
-| Splash | Menu | Game | History |
-|--------|------|------|---------|
-| ![Splash](screenshots/splash.png) | ![Menu](screenshots/menu.png) | ![Game](screenshots/game.png) | ![History](screenshots/history.png) |
+| Splash | Menu | Settings | Game | History |
+|--------|------|----------|------|---------|
+| ![Splash](screenshots/splash.png) | ![Menu](screenshots/menu.png) | ![Settings](screenshots/settings.png) | ![Game](screenshots/game.png) | ![History](screenshots/history.png) |
 
 ### Android
 
@@ -92,9 +92,9 @@ To add a new language:
 
 ### Desktop
 
-| Splash | Меню | Игра | История |
-|--------|------|------|---------|
-| ![Splash](screenshots/splash.png) | ![Menu](screenshots/menu.png) | ![Game](screenshots/game.png) | ![History](screenshots/history.png) |
+| Splash | Меню | Настройки | Игра | История |
+|--------|------|-----------|------|---------|
+| ![Splash](screenshots/splash.png) | ![Menu](screenshots/menu.png) | ![Settings](screenshots/settings.png) | ![Game](screenshots/game.png) | ![History](screenshots/history.png) |
 
 ### Android
 
